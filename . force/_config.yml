@@ -34,6 +34,18 @@ theme: minima
 remote_theme: pages-themes/minimal
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  
+scripts:
+  - assets/uswds/js/uswds.min.js
+  - javascripts/private-eye.js
+  - javascripts/application.js
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: post  
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -43,12 +55,16 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
+exclude:
+exclude:
+  - CONTRIBUTING.md
+  - Dockerfile
+  - docker-compose.yml
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .sass-cache/
+  - .jekyll-cache/
 #   - node_modules/
 #   - vendor/bundle/
 #   - vendor/cache/
